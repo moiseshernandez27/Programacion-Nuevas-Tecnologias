@@ -1,34 +1,66 @@
 /*Formulario */
-main {
-    max-width: 960px;
-    margin: 20px auto;
-    background-color:#333;
-    color:white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    font-size: 20px;
-  }
+form {
+  max-width: 960px;
+  margin: 20px auto;
+  background-color: #333;
+  color: white;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+}
 /*Entradas */
 form label,
 form input[type="text"],
 form input[type="email"],
 form textarea {
-  display: block; 
-  width: 100%; 
+  display: block;
+  width: 100%;
   margin-bottom: 15px;
-  font-size: 24px; 
-  border-radius: 20PX
+  font-size: 24px;
+  border-radius: 20px;
+}
+
+input {
+  padding: 6px 10px;
 }
 
 /* Boton de Submit*/
 input[type="submit"] {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: white 1px solid; 
-    border-radius: 20PX;
-    cursor: pointer;
-    font-size: 24px; 
-    margin-top: 10px; 
-  }
+  background-color: white;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #86C8DE;
+  color: white;
+}
+
+/* Boton de Reset*/
+input[type="reset"] {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: white 1px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 10px;
+}
+input[type="reset"]:hover {
+  color: #86C8DE;
+  border: #86C8DE 1px solid;
+}
+
+.conteiner-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
