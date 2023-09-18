@@ -1,7 +1,6 @@
-/*Formulario */
 form {
-  width: 75%;
-  max-width: 600px;
+  width: 80%;
+  max-width: 720px;
   margin: 20px auto;
   background-color: #333;
   color: white;
@@ -10,31 +9,31 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-size: 20px;
 }
-/*Entradas */
 form label,
 form input,
 form input[type="text"],
 form input[type="email"],
-form input[type="reset"],
-form input[type="submit"],
-form textarea {
+form input.primario,
+form textarea,
+form select {
   display: block;
   width: 100%;
   margin-bottom: 12px;
   font-size: 20px;
   border-radius: 20px;
 }
-
 form input,
-form textarea {
+form select {
   padding: 8px 12px;
   margin-bottom: 24px;
-  font-family: Arial, sans-serif;
 }
 
-/* Boton de Submit y Reset*/
-input[type="submit"],
-input[type="reset"] {
+form input[type="checkbox"] {
+  margin-bottom: 0;
+  transform: scale(1.5);
+}
+
+.primario {
   background-color: white;
   color: #333;
   padding: 10px 20px;
@@ -42,27 +41,13 @@ input[type="reset"] {
   cursor: pointer;
   font-size: 24px;
   margin-top: 10px;
-}
-
-/* Boton de Submit*/
-input[type="submit"] {
-  background-color: white;
-  color: #333;
-} 
-input[type="submit"]:hover {
+  text-align: center;
   background-color: #86C8DE;
   color: white;
 }
 
-/* Boton de Reset*/
-input[type="reset"] {
-  background-color: #333;
-  color: white;
-  border: white 1px solid;
-}
-input[type="reset"]:hover {
-  color: #86C8DE;
-  border: #86C8DE 1px solid;
+.primario:hover {
+  background-color: #6598a8;
 }
 
 .conteiner-horizontal {
