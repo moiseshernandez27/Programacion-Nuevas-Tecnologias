@@ -20,6 +20,7 @@ body {
 
 main {
   padding: 24px 36px;
+  min-height: calc(100vh - 60px - 38px);
 }
 
 nav {
@@ -63,8 +64,6 @@ footer {
   background-color: #333;
   color: white;
   flex-shrink: 0; 
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 
