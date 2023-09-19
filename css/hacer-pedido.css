@@ -15,17 +15,17 @@ form input[type="text"],
 form input[type="email"],
 form input.primario,
 form textarea,
-form select {
+form select,
+form button {
   display: block;
-  width: 100%;
   margin-bottom: 12px;
   font-size: 20px;
   border-radius: 20px;
 }
 form input,
-form select {
+form select,
+form button {
   padding: 8px 12px;
-  margin-bottom: 24px;
 }
 
 form input[type="checkbox"] {
@@ -34,16 +34,14 @@ form input[type="checkbox"] {
 }
 
 .primario {
-  background-color: white;
-  color: #333;
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 24px;
   margin-top: 10px;
   text-align: center;
-  background-color: #86C8DE;
+  background-color: #86c8de;
   color: white;
+  width: 100%;
 }
 
 .primario:hover {
@@ -55,5 +53,25 @@ form input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.platos .conteiner-horizontal {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.platos .conteiner-horizontal label {
+  margin-right: 10px;
+}
+
+.platos .conteiner-horizontal select {
+  flex: 1; /* Que el campo de selección ocupe el espacio restante */
+  width: 70%; 
+}
+
+.platos .conteiner-horizontal input {
+  width: 10%;
 }
