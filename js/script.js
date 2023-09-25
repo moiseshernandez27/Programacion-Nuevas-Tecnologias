@@ -43,10 +43,35 @@ function agregarAlPedido() {
 function enviar() {
   alert("Enviando...");
   // TODO:
-  //      Si el usuario elige enviar:
-  //          - Parsear cantidad a numero y verificar cantidad > 0 (parseInt())
-  //          - El select debe tener una opcion seleccionada (elemento.selectedIndex > 0)
-  //      Si las validaciones estan ok:
-  //          - Mostrar un alert indicando que el pedido esta en preparacion
-  //          - Resetear campos
+    const selectPlato = document.querySelectorAll('select[id="itemSelect"]');
+    const cantidadInputs = document.querySelectorAll('input[type="number"]');
+    let isValid = true;
+  
+    //Parsear cantidad a numero y verificar cantidad > 0 (parseInt())
+     //          - El select debe tener una opcion seleccionada (elemento.selectedIndex > 0)
+    selectPlato.forEach((select, index) => {
+      if (select.selectedIndex === 0 || parseInt(cantidadInputs[index].value) <= 0) {
+        isValid = false;
+        return;
+      }
+    });
+  
+    if (!isValid) {
+      alert("Por favor, selecciona un plato y una cantidad válida para todos los elementos.");
+      return;
+    }
+      //      Si el usuario elige enviar:
+      //      Si las validaciones estan ok:
+      //- Mostrar un alert indicando que el pedido esta en preparacion
+    alert("Su pedido se esta procesando...");
+    console.log(selectPlato)
+  
+    //          - Resetear campos 
+    selectPlato.forEach((select) => {
+      select.selectedIndex = 0;
+    });
+    cantidadInputs.forEach((input) => {
+      input.value = "";
+    });
+  
 }
